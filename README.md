@@ -14,3 +14,8 @@ Just like your shop has shelves and products, your website will have pages:
 Order Info – Steps, zones, timings
 
 Testimonials – Quotes, ratings
+
+Ordering, Payment & Checkout
+Enable online orders for pickup or local delivery, and support both UPI and cash payments. The checkout must be fast and secure.
+
+
