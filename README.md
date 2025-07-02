@@ -2,6 +2,21 @@
 
 Just like your shop has shelves and products, your website will have pages:
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 🏠 Home Page — your shop name, opening hours, welcome message and  USPs
 
 📷 Products Page — list of vegetables, fruits, prices (with images)
