@@ -1,1 +1,225 @@
 <!-- front page like  -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloShop - Your Local Grocery Partner</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <!-- Font Awesome for icons (optional, but good for contact page) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="HelloShop Logo">
+                <h1>HelloShop</h1>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="images/hero-shopkeeper.jpg" alt="Smiling shopkeeper with tablet and notebook" class="hero-image">
+                    <div class="hero-text">
+                        <h2>Your Stock Stops Spoiling Now - Even Without Barcodes</h2>
+                        <p class="tagline">Hybrid inventory system that works how you do: scan when possible, tap to add when needed.</p>
+                        <div class="usp-list">
+                            <p>AR/3D offers confidence and reduces returns.</p>
+                            <p>Agentic AI fosters loyalty through tailored, proactive assistance.</p>
+                            <p>Mobile-first speed meets today's user expectations head-on.</p>
+                            <p>Headless + omni-modal ensures flexibility and future-readiness.</p>
+                            <p>Sustainability builds trust and values-aligned brand identity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Our Fresh Produce & More</h2>
+                <div class="category-grid" id="categoryGrid">
+                    <!-- Categories will be dynamically loaded here by JavaScript -->
+                    <a href="#" class="category-card" data-category="vegetables">
+                        <img src="images/veg-category.jpg" alt="Fresh Vegetables">
+                        <h3>Fresh Vegetables</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="fruits">
+                        <img src="images/fruit-category.jpg" alt="Fresh Fruits">
+                        <h3>Fresh Fruits</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="dairy">
+                        <img src="images/dairy-category.jpg" alt="Dairy & Eggs">
+                        <h3>Dairy & Eggs</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="bakery">
+                        <img src="images/bakery-category.jpg" alt="Bakery">
+                        <h3>Bakery</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="staples">
+                        <img src="images/staples-category.jpg" alt="Grains & Staples">
+                        <h3>Grains & Staples</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="spices">
+                        <img src="images/spices-category.jpg" alt="Spices & Condiments">
+                        <h3>Spices & Condiments</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="snacks">
+                        <img src="images/snacks-category.jpg" alt="Snacks & Beverages">
+                        <h3>Snacks & Beverages</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="organic">
+                        <img src="images/organic-category.jpg" alt="Organic & Local">
+                        <h3>Organic & Local</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="frozen">
+                        <img src="images/frozen-category.jpg" alt="Frozen Foods">
+                        <h3>Frozen Foods</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="personal-care">
+                        <img src="images/personal-care-category.jpg" alt="Personal Care">
+                        <h3>Personal Care</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="household">
+                        <img src="images/household-category.jpg" alt="Household Essentials">
+                        <h3>Household Essentials</h3>
+                    </a>
+                    <a href="#" class="category-card" data-category="offers">
+                        <img src="images/offers-category.jpg" alt="Special Offers">
+                        <h3>Special Offers</h3>
+                    </a>
+                </div>
+
+                <div id="productList" class="product-list hidden">
+                    <!-- Specific products for a selected category will be loaded here -->
+                    <button class="back-to-categories" id="backToCategories">← Back to Categories</button>
+                    <h3 class="current-category-title"></h3>
+                    <div class="product-grid">
+                        <!-- Products will be dynamically loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offers" class="offers-section">
+            <div class="container">
+                <h2 class="section-title">Our Best Deals & Combos</h2>
+                <div class="offer-cards">
+                    <div class="offer-card">
+                        <img src="images/offer-placeholder-1.jpg" alt="Offer 1">
+                        <h3>Get ₹50 off on your first order!</h3>
+                        <p>Valid for new customers. Minimum purchase of ₹500. Limited time offer.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="offer-card">
+                        <img src="images/offer-placeholder-2.jpg" alt="Offer 2">
+                        <h3>Weekend Veggie Combo - Save 15%</h3>
+                        <p>Includes fresh spinach, tomatoes, onions, and potatoes. Perfect for your family meals.</p>
+                        <button class="btn">View Combo</button>
+                    </div>
+                    <div class="offer-card">
+                        <img src="images/offer-placeholder-3.jpg" alt="Offer 3">
+                        <h3>Flash Deal: Dairy Delights - 20% Off!</h3>
+                        <p>Selected milk, curd, and cheese products at unbeatable prices for 24 hours!</p>
+                        <button class="btn">Shop Now</button>
+                    </div>
+                </div>
+
+                <div class="order-info">
+                    <h3 class="section-subtitle">How to Order & Pickup</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-list-ol"></i>
+                            <h4>1. Browse & Select</h4>
+                            <p>Explore our fresh produce and grocery items from the comfort of your home.</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-volume"></i>
+                            <h4>2. Call or WhatsApp Your Order</h4>
+                            <p>Note down your desired items and quantities, then call us or send a message on WhatsApp.</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <h4>3. Pick Up Your Fresh Order</h4>
+                            <p>Your order will be ready for pickup at our shop. We'll notify you when it's prepared.</p>
+                        </div>
+                    </div>
+                    <div class="timing-zones">
+                        <h4>Pickup Timings:</h4>
+                        <p>Morning Slot: 10:00 AM - 1:00 PM</p>
+                        <p>Evening Slot: 4:00 PM - 7:00 PM</p>
+                        <h4>Serving Zones:</h4>
+                        <p>We cater to local customers within a 5 KM radius of our shop. Call us to confirm your area!</p>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <h3 class="section-subtitle">What Our Shopkeepers Say</h3>
+                    <div class="testimonial-cards">
+                        <div class="testimonial-card">
+                            <p class="quote">"HelloShop has made managing my inventory so much easier, even with local produce. The manual entry is a game-changer!"</p>
+                            <p class="author">- Rajesh Kumar, Proprietor of FreshMart</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="quote">"The clarity on stock levels helps me prevent spoilage. I've saved so much money since using this system!"</p>
+                            <p class="author">- Priya Sharma, Manager at Green Grocer</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch with HelloShop</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Reach Out To Us</h3>
+                        <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+                        <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a></p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@helloshop.com">info@helloshop.com</a></p>
+                        <p><i class="fas fa-clock"></i> Opening Hours: Mon - Sat, 9 AM - 8 PM | Sunday, 9 AM - 2 PM</p>
+                    </div>
+                    <div class="location-map">
+                        <h3>Find Us Here</h3>
+                        <p>Visit our store for the freshest produce and a friendly shopping experience!</p>
+                        <div class="map-placeholder">
+                            <!-- Placeholder for Google Map Embed -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d77.123456!3d28.765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQ1JzU1LjEiTiA3N8KwMDcnMjEuMyJF!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <p><a href="https://maps.app.goo.gl/YourShopGoogleMapsLink" target="_blank">Open in Google Maps</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 HelloShop. All rights reserved. <br> Powered by Perplexity AI Design.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
