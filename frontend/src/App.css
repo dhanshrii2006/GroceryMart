@@ -1,0 +1,178 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.header p {
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Dashboard layout */
+.dashboard {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Item grid */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Item card styles */
+.item-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.item-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Stock level indicators */
+.stock-info {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stock-high {
+  background-color: #e3fcef;
+  color: #0d6832;
+}
+
+.stock-low {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.stock-out {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Price display */
+.price-info {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.base-price {
+  color: #666;
+}
+
+.display-price {
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Button styles */
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.button-sell {
+  background-color: #4299e1;
+  color: white;
+}
+
+.button-sell:hover {
+  background-color: #3182ce;
+}
+
+.button-sell:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.button-restock {
+  background-color: #48bb78;
+  color: white;
+}
+
+.button-restock:hover {
+  background-color: #38a169;
+}
+
+/* About section */
+.about {
+  background-color: #e6f3ff;
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #4a5568;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .item-card {
+    padding: 1rem;
+  }
+}

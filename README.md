@@ -1,128 +1,120 @@
-# GroceryMart
+# Grocery Dashboard
 
-Just like your shop has shelves and products, your website will have pages:
+A live inventory management system for grocery stores with real-time updates and dynamic surge pricing.
 
+## About the Website
 
+This website helps grocery managers track live inventory and pricing in real time. Built with the MERN stack, it demonstrates dynamic surge pricing, automatic updates, and clean React design.
 
+## Features
 
-
-
-
-
-
-
-
-🧭 Why These Are Game-Changers:
-AR/3D offers confidence and reduces returns.
-
-Agentic AI fosters loyalty through tailored, proactive assistance.
-
-Mobile-first speed meets today's user expectations head-on.
-
-Headless + omni‑modal ensures flexibility and future-readiness.
-
-Sustainability builds trust and values-aligned brand identity.
+- 🔄 Real-time inventory updates (3-second polling)
+- 💰 Dynamic surge pricing (20% increase when stock ≤ 10)
+- 🎨 Clean, responsive design
+- 📊 Visual stock level indicators
+- 🛍️ Quick sell and restock actions
+- 🚀 Automatic data seeding on first run
 
 
 
 
-🏠 Home Page — your shop name, opening hours, welcome message and  USPs
+## Project Structure
 
-📷 Products Page — list of vegetables, fruits, prices (with images)
-
-📞 Contact Page — your phone number, WhatsApp button, location map
-
-📣 Offer Page (optional) — “Get ₹50 off on first order!” Combos, flash deals
-
-
-Order Info – Steps, zones, timings
-
-Testimonials – Quotes, ratings
-
-Ordering, Payment & Checkout
-Enable online orders for pickup or local delivery, and support both UPI and cash payments. The checkout must be fast and secure.
-
-
-
-Based on your requirements (attracting shopkeepers, functionality focus, warm design, hybrid manual/tech system, competitive differentiation), here's a non-code implementation plan:
-
-### 1. Problem-First Homepage Structure
-**How to implement:**
-- Above the fold: Show a shopkeeper smiling while holding tablet + paper notebook
-- Headline: "Your Stock Stops Spoiling Now - Even Without Barcodes"
-- Subhead: "Hybrid inventory system that works how you do: scan when possible, tap to add when needed"
-- Visual: Split-screen animation showing:
-  - Left: Hand scanning barcode → "3 Milk Cartons added! Exp: Oct 15"
-  - Right: Finger tapping "Manual Add" → "Farm Eggs → Qty: 15 → Exp: Tomorrow"
-
-### 2. Hybrid Workflow Demonstration
-**How to implement:**
-- Create an interactive diagram showing both paths:
 ```
-[New Delivery]
-  │
-  ├───[Barcoded Item] → Scan → Auto-expiry capture → Stock Map
-  │
-  └───[Unmarked Item] → Manual Add → (Show 3-step process):
-        1. Tap "Add Item" button
-        2. Take photo or type name
-        3. Set expiry with big date picker
+grocery-dashboard/
+├── backend/
+│   ├── models/
+│   │   └── GroceryItem.js
+│   ├── .env.example
+│   ├── index.js
+│   └── package.json
+└── frontend/
+    ├── public/
+    │   ├── index.html
+    │   └── manifest.json
+    ├── src/
+    │   ├── App.js
+    │   ├── App.css
+    │   └── index.js
+    └── package.json
 ```
-- Include real photos of:
-  - Worker's hands adding local tomatoes via tablet form
-  - Same tablet showing "SELL THESE FIRST: Tomatoes (exp today)"
 
-### 3. Competitive Edge Section
-**How to beat competitors:**
-| Feature          | Your System                 | Typical Competitor       | Visual Cue              |
-|------------------|-----------------------------|--------------------------|-------------------------|
-| **Item Entry**   | Scan + Photo + Manual Type  | Barcode scan only        | ✅✅✅ vs ✅❌❌ icons |
-| **Offline Mode** | Full functionality offline  | Cloud-dependent          | 📶 icon with checkmark  |
-| **Hardware**     | Any Android tablet          | $800 proprietary scanner | 💰→$ vs 💰→$$$          |
-| **Training**     | 15-minute setup             | 3-day certification      | ⏱️15min vs 🗓️3days     |
+## Setup Instructions
 
-**Implementation:**
-- Create comparison table with red/green color coding
-- Add "As seen in your store" badges showing common unbarcoded items:
-  ```diff
-  + Local Vegetables  + Bakery Items  + Butcher Cuts
-  ```
+### Prerequisites
 
-### 4. Warm Design Elements
-**How to execute:**
-- **Color scheme:** Terracotta orange + cream + sage green
-- **Textures:** Subtle paper grain background on forms
-- **Imagery:**
-  - Close-ups of hands using system (show age diversity)
-  - Morning light in store aisles
-  - Coffee cup beside tablet showing "Low Stock Alert"
-- **Language:**
-  - Use "you" and "your team" instead of "users"
-  - Replace "interface" → "daily helper"
+- Node.js and npm installed
+- MongoDB Atlas account
 
-### 5. Manual Entry Showcase
-**Implementation priority:**
-1. Film 30-second vertical video showing:
-   - Worker at receiving dock
-   - Adding unbarcoded cheese wheel via 3 taps:
-     ```mermaid
-     graph LR
-     A[Tap '+' button] --> B[Select Camera > Snap Label]
-     B --> C[Type 'Artisan Gouda']
-     C --> D[Set expiry wheel]
-     ```
-2. Show the alert next day: "⚠️ Sell Gouda FIRST! Expires today"
 
-### 6. Cost-Saving Proof Points
-**How to present:**
-```plaintext
-YOUR CURRENT LOSSES              OUR SOLUTION
-──────────────────────────────────────────────────
-[ $ ] Spoiled stock      →      68% reduction
-[ 🏃 ] Staff search time  →      2h/day saved
-[ 😠 ] Lost sales         →      "In back room!" alerts
-──────────────────────────────────────────────────
-Yearly savings estimate: ████ $12,400 ████
+
+### Backend Setup
+
+1. Create a MongoDB Atlas cluster and get your connection string
+
+2. Set up the backend:
+   ```bash
+   cd backend
+   npm install
+   cp .env.example .env
+   ```
+
+3. Edit `.env` and add your MongoDB connection string:
+   ```
+   MONGO_URI=your_mongodb_atlas_connection_string
+   PORT=5000
+   ```
+
+4. Start the backend:
+   ```bash
+   npm run dev
+   ```
+
+### Frontend Setup
+
+1. Open a new terminal and set up the frontend:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+2. Start the frontend:
+   ```bash
+   npm start
+   ```
+
+3. Open http://localhost:3000 in your browser
+
+## Initial Data
+
+On first run, the backend automatically seeds the database with:
+- Apples ($0.50)
+- Milk ($3.99)
+- Bread ($2.49)
+- Eggs ($3.99)
+
+## Features Explained
+
+### Dynamic Surge Pricing
+- Normal stock (>10 units): Regular base price
+- Low stock (≤10 units): 20% price increase
+
+### Stock Levels
+- High stock (>10): Green indicator
+- Low stock (≤10): Yellow indicator
+- Out of stock (0): Red indicator
+
+### Actions
+- "Sell 1": Decrements stock by 1
+- "Restock": Adds 20 units to stock
+
+## Technologies Used
+
+- **Frontend**: React, Axios
+- **Backend**: Node.js, Express
+- **Database**: MongoDB with Mongoose
+- **Updates**: Real-time polling
+- **Styling**: Pure CSS with responsive design
 ```
 
 **Implementation:**
